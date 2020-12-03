@@ -1,5 +1,15 @@
 \input{latex/main}
 
+\newcommand*{\img}[1]{%
+    \raisebox{-.15\baselineskip}{%
+        \includegraphics[
+        height=\baselineskip,
+        width=\baselineskip,
+        keepaspectratio,
+        ]{#1}%
+    }%
+}
+
 \begin{document}
 
 \section{Concept}
@@ -33,7 +43,7 @@ How large the project is, and what significant sources of work are there.
 \subsection{Game Mechanics}
 \subsection{Controls}
 
-\keys{\ctrl + \shift + p} can be used to pause the game.
+You can create keyboard input visuals with \keys{\ctrl + \shift + p} or controller buttons like \img{latex/images/controller_a.png}
 
 \section{UI Design}
 \subsection{Theme}
