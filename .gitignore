@@ -2,5 +2,7 @@
 *.aux
 *.out
 *.pdf
+*.pygstyle
+*.pygtex
 
 !gdd.pdf
