@@ -1,17 +1,4 @@
 \input{latex/main}
-
-% temporary, before put into own latex file
-\usepackage{minted}
-\newcommand*{\img}[1]{%
-    \raisebox{-.17\baselineskip}{%
-        \includegraphics[
-        height=\baselineskip,
-        width=\baselineskip,
-        keepaspectratio,
-        ]{#1}%
-    }%
-}
-
 \begin{document}
 
 \section{Concept}
@@ -55,19 +42,19 @@ What the finer game mechanics and game rules are.
 \subsection{Controls}
 What the controls for the game are, and what different options for input there is.
 
-You can create keyboard input visuals with \keys{\ctrl + \shift + p} or controller buttons like \img{latex/images/controller_a.png}.
+You can create keyboard input visuals with \keys{\ctrl + \shift + p} or controller buttons like \controllerA.
 
 Codes for various controller buttons can be found as:
 \begin{itemize}
-\item \img{latex/images/controller_a.png} \mintinline{latex}{\img{latex/images/controller_a.png}}
-\item \img{latex/images/controller_b.png} \mintinline{latex}{\img{latex/images/controller_b.png}}
-\item \img{latex/images/controller_x.png} \mintinline{latex}{\img{latex/images/controller_x.png}}
-\item \img{latex/images/controller_y.png} \mintinline{latex}{\img{latex/images/controller_y.png}}
-\item \img{latex/images/controller_dpad.png} \mintinline{latex}{\img{latex/images/controller_dpad.png}}
-\item \img{latex/images/controller_dpad_up.png} \mintinline{latex}{\img{latex/images/controller_dpad_up.png}}
-\item \img{latex/images/controller_dpad_left.png} \mintinline{latex}{\img{latex/images/controller_dpad_left.png}}
-\item \img{latex/images/controller_dpad_down.png} \mintinline{latex}{\img{latex/images/controller_dpad_down.png}}
-\item \img{latex/images/controller_dpad_right.png} \mintinline{latex}{\img{latex/images/controller_dpad_right.png}}
+\item \controllerA \hspace{1pt} \mintinline{latex}{\controllerA}
+\item \controllerB \hspace{1pt} \mintinline{latex}{\controllerB}
+\item \controllerX \hspace{1pt} \mintinline{latex}{\controllerX}
+\item \controllerY \hspace{1pt} \mintinline{latex}{\controllerY}
+% \item \img{latex/images/controller_dpad.png} \mintinline{latex}{\img{latex/images/controller_dpad.png}}
+% \item \img{latex/images/controller_dpad_up.png} \mintinline{latex}{\img{latex/images/controller_dpad_up.png}}
+% \item \img{latex/images/controller_dpad_left.png} \mintinline{latex}{\img{latex/images/controller_dpad_left.png}}
+% \item \img{latex/images/controller_dpad_down.png} \mintinline{latex}{\img{latex/images/controller_dpad_down.png}}
+% \item \img{latex/images/controller_dpad_right.png} \mintinline{latex}{\img{latex/images/controller_dpad_right.png}}
 \end{itemize}
 
 \section{UI Design}
