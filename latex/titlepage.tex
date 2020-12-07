@@ -28,8 +28,20 @@
 }
 
 \newcommand{\gddChangelogEntry}[3]{
-\textbf{v#1} \textbf{#2}: #3
+\begin{minipage}[t]{0.2\textwidth}
+\begin{raggedright}
+\textbf{v#1}
+\newline
+{\small #2}
+\end{raggedright}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.785\textwidth}
+#3
+\end{minipage}
 
+\hrulefill
+\newline
 }
 
 \newcommand{\gddChangelog}{
