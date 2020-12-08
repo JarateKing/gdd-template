@@ -4,5 +4,6 @@
 *.pdf
 *.pygstyle
 *.pygtex
+*.toc
 
 !gdd.pdf
