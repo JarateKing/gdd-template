@@ -22,6 +22,18 @@
 \hrulefill
 }
 
+\newcommand{\gddTOC}{
+	\tableofcontents
+	\hrulefill
+}
+
+\newcommand{\switchToAppendix}{
+	\renewcommand{\thesection}{\Roman{section}}
+	\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+	\renewcommand{\thesubsubsection}{\thesection.\thesubsection.\alph{subsubsection}}
+	\setcounter{section}{0}
+}
+
 \newcommand{\gddChangelogEntry}[3]{
 \begin{minipage}[t]{0.2\textwidth}
 \begin{raggedright}
