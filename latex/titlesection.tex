@@ -1,7 +1,5 @@
-\newcommand{\gddTitlepage}{
+\newcommand{\gddTitlesection}{
 \newpage
-
-\vspace*{3cm}
 
 \begin{center}
 {\Huge \gddTitle}
@@ -9,22 +7,31 @@
 {\small \gddSubtitle}
 \end{center}
 
-\vspace{5cm}
-
 \begin{center}
 {\Large \gddCompany}
 
 {\normalsize Authored by: \gddAuthors}
 \end{center}
 
-\vspace{7cm}
-
 \begin{center}
 {\normalsize Date: \gddDate}
 
 {\normalsize Version: \gddVersion}
 \end{center}
-\newpage
+
+\hrulefill
+}
+
+\newcommand{\gddTOC}{
+	\tableofcontents
+	\hrulefill
+}
+
+\newcommand{\switchToAppendix}{
+	\renewcommand{\thesection}{\Roman{section}}
+	\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+	\renewcommand{\thesubsubsection}{\thesection.\thesubsection.\alph{subsubsection}}
+	\setcounter{section}{0}
 }
 
 \newcommand{\gddChangelogEntry}[3]{
@@ -46,7 +53,7 @@
 
 \newcommand{\gddChangelog}{
 \newpage
-
+\section{Changelog}
 \gddChangelogEntries
 
 \newpage
