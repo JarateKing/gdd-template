@@ -6,5 +6,10 @@
 *.pygtex
 *.toc
 *.synctex.gz
+*.bbl
+*.bcf
+*.blg
+*.gitlog.bib
+*.run.xml
 
 !gdd.pdf

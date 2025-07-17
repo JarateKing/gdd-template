@@ -36,3 +36,42 @@
 
 % code
 \usepackage{minted}
+
+% for demos
+\usepackage{multicol}
+
+% taken and restyled from gitlog package
+\RequirePackage[%	
+datamodel=gitlog,
+bibstyle=gitlog,
+sorting=none,
+date=iso8601,
+firstinits=true,
+defernumbers=true,
+backend=biber,
+]{biblatex}
+\DeclareBibliographyDriver{gitcommit}{
+\usebibmacro{date}
+\usebibmacro{title}
+\finentry}
+\defbibenvironment{bibliography}
+{\list{}{
+	\setlength{\leftmargin}{0em}
+	\setlength{\labelwidth}{0em}
+	\setlength{\itemindent}{0em}
+	\setlength{\itemsep}{\bibitemsep}
+	\setlength{\parsep}{\bibparsep}}}
+{\endlist}
+{\item}
+{\catcode`\%=12
+	\immediate\write18{
+		git --no-pager log
+		--pretty="format:@gitcommit{%h,%n 
+			author = {%an},%n 
+			date = {%ad},%n 
+			title = {%B},%n
+			commithash = {%H} 
+		}" --date=short
+		-- *.tex > \jobname.gitlog.bib}
+}
+\addbibresource{\jobname.gitlog.bib}
